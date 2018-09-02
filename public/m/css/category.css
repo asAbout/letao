@@ -1,0 +1,49 @@
+.cate_left {
+	width: 90px;
+	height: 100%;
+	float: left;
+}
+.cate_left ul {
+	width: 100%;
+}
+.cate_left ul li {
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #fff;
+	background: #f3f4f5;
+	padding: 10px;
+}
+.cate_left ul li.now {
+	background: #fff;
+	color: orange;
+	border-right: none;
+}
+.cate_left ul li.now a {
+	color: orange;
+}
+.cate_left ul li a{
+	display: block;
+	color: #000;
+}
+
+.cate_right {
+	overflow: hidden;
+	padding: 0 10px;
+}
+.cate_right ul {
+	width: 100%;
+}
+.cate_right ul li {
+	width: 33.3333%;
+	float: left;
+	text-align: center;
+}
+.cate_right ul li a {
+	display: block;
+	width: 100%;
+}
+.cate_right ul li a img {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
