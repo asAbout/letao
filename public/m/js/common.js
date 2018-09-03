@@ -13,8 +13,28 @@ lt.getSearchKey = function () {
 	})
 	return params;
 }
+lt.serialize2Object = function (serialize) {
+	var obj ={};
+	var serializeArr = serialize.split('&');
+	serializeArr.forEach(function (item, i) {
+		var itemArr = item.split('=');
+		obj[itemArr[0]] = itemArr[1]
+	})
+	return obj;
+}
+lt.itemDataById = function (arr, id) {
+	var obj = null;
+	arr.forEach(function (item, i) {
+		if (item.id == id) {
+			obj = item;
+		}
+	})
+	return obj;
+}
+
 lt.loginUrl = '/m/user/login.html'
 lt.cartUrl = '/m/user/cart.html'
+lt.userUrl = '/m/user/index.html'
 lt.loginAjax = function (params) {
 	$.ajax({
 		type: params.type || 'get',
@@ -35,5 +55,5 @@ lt.loginAjax = function (params) {
 			mui.toast('服务器繁忙');
 		}
 	})
-   
+
 }
