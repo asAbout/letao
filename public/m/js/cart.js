@@ -51,6 +51,7 @@ $(function ($) {
 						if (data.success == true) {
 							item.num = num;
 							item.size = size;
+							
 							$('.mui-table-view').html(template('cart',window.cartData))
 							mui.toast('编辑成功');
 						}
